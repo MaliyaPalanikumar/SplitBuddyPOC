@@ -16,3 +16,8 @@ final class Item {
         self.timestamp = timestamp
     }
 }
+
+class ViewModel {
+    var description: String?
+    var amount:String?
+}

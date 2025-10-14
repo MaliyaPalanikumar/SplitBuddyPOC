@@ -12,7 +12,7 @@ import SwiftData
 struct SplitBuddyPOCApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            TranscationDetails.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

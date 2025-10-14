@@ -10,46 +10,52 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @Query private var transcation: [TranscationDetails]
+    
+    @State var isExpenseAdded: Bool = false
+    @State var expenseAmount: String = ""
+    @State var expenseDesc: String = ""
+    
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(transcation) { transaction in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text("you paid \(transaction.amount)")
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text("you paid \(transaction.amount)")
                     }
                 }
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    Button(action: {
+                        isExpenseAdded = true
+                    }, label: {
+                        Label("Add Expense", systemImage: "plus")
+                    }).fullScreenCover(
+                        isPresented: $isExpenseAdded,
+                        onDismiss: {
+                            var currentTranscation = TranscationDetails(amount: Double(expenseAmount) ?? 0.00,
+                                                                transactionDescription: expenseDesc,
+                                                                 paidBy: nil)
+                            modelContext.insert(currentTranscation)
+                        }, content: {
+                            ExpenseView(transactionDescription: $expenseDesc,
+                                        amount: $expenseAmount)
+                        })
                 }
             }
-        } detail: {
-            Text("Select an item")
         }
+    detail: {
+        Text("Select an item")
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
     }
-
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(transcation[index])
             }
         }
     }
