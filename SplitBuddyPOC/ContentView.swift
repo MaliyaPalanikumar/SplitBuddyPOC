@@ -21,9 +21,9 @@ struct ContentView: View {
             List {
                 ForEach(transcation) { transaction in
                     NavigationLink {
-                        Text("you paid \(transaction.amount)")
+                        ExpenseCellView(expenseDetails: transaction)
                     } label: {
-                        Text("you paid \(transaction.amount)")
+                        ExpenseCellView(expenseDetails: transaction)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -38,8 +38,9 @@ struct ContentView: View {
                         isPresented: $isExpenseAdded,
                         onDismiss: {
                             var currentTranscation = TranscationDetails(amount: Double(expenseAmount) ?? 0.00,
-                                                                transactionDescription: expenseDesc,
-                                                                 paidBy: nil)
+                                                                        transactionDescription: expenseDesc, 
+                                                                        transactionDate: Date(),
+                                                                        paidBy: nil)
                             modelContext.insert(currentTranscation)
                         }, content: {
                             ExpenseView(transactionDescription: $expenseDesc,

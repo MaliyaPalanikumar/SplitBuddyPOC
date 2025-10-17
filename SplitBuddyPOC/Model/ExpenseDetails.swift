@@ -6,40 +6,38 @@
 //
 
 import SwiftData
+import Foundation
 
 @Model
 final class TranscationDetails {
     var amount: Double
     var transactionDescription: String
+    var transactionDate: Date
     var paidBy: Person?
     
-    init(amount: Double, transactionDescription: String, paidBy: Person?) {
+    //@Relationship(deleteRule: .cascade, inverse: \Person.id) var candidate: [Person]?
+    
+    init(amount: Double, transactionDescription: String, transactionDate: Date, paidBy: Person?) {
         self.amount = amount
         self.transactionDescription = transactionDescription
+        self.transactionDate = transactionDate
         self.paidBy = paidBy
+        //self.candidate = candidate
     }
 }
 
 @Model
 class Person {
+    var id: Int
     var name: String
-    var amount: Double
+    @Relationship(deleteRule: .cascade, inverse: \TranscationDetails.paidBy) var transactions: [TranscationDetails]?
     var isOwes: Bool
     
-    init(name: String, amount: Double, isOwes: Bool) {
+    init(name: String, transactions: [TranscationDetails]?, isOwes: Bool) {
+        self.id = Int.random(in: 1...1000)
         self.name = name
-        self.amount = amount
+        self.transactions = transactions
         self.isOwes = isOwes
     }
 }
 
-@Model
-final class Transcation {
-    @Attribute(.unique) var transactionName: String
-    @Relationship(deleteRule: .cascade, inverse: \TranscationDetails.id) var transaction: [TranscationDetails]
-    
-    init(transactionName: String, transaction: [TranscationDetails]) {
-        self.transactionName = transactionName
-        self.transaction = transaction
-    }
-}

@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct ExpenseCellView: View {
-    var expenseDesc: String
+    var expenseDetails: TranscationDetails
+    var expenseDateString: String {
+            var dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from: expenseDetails.transactionDate)
+    }
     var body: some View {
-        VStack(spacing: 20.0, content: {
-            Text(verbatim: expenseDesc)
-            
-        })
+        HStack {
+            Text(verbatim:expenseDateString )
+            VStack(spacing: 20.0, content: {
+                Text(verbatim: expenseDetails.transactionDescription)
+                Text(verbatim: String(expenseDetails.amount))
+            })
+        }
     }
 }
