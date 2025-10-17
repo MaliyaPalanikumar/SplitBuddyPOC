@@ -9,12 +9,8 @@
 /* Begin PBXBuildFile section */
 		A5BAE8E92E9395FB005AFCD1 /* SplitBuddyPOCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE8E82E9395FB005AFCD1 /* SplitBuddyPOCApp.swift */; };
 		A5BAE8EB2E9395FB005AFCD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE8EA2E9395FB005AFCD1 /* ContentView.swift */; };
-		A5BAE8ED2E9395FB005AFCD1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE8EC2E9395FB005AFCD1 /* Item.swift */; };
 		A5BAE8EF2E9395FC005AFCD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5BAE8EE2E9395FC005AFCD1 /* Assets.xcassets */; };
 		A5BAE8F22E9395FC005AFCD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5BAE8F12E9395FC005AFCD1 /* Preview Assets.xcassets */; };
-		A5BAE8FC2E9395FC005AFCD1 /* SplitBuddyPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE8FB2E9395FC005AFCD1 /* SplitBuddyPOCTests.swift */; };
-		A5BAE9062E9395FC005AFCD1 /* SplitBuddyPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE9052E9395FC005AFCD1 /* SplitBuddyPOCUITests.swift */; };
-		A5BAE9082E9395FC005AFCD1 /* SplitBuddyPOCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE9072E9395FC005AFCD1 /* SplitBuddyPOCUITestsLaunchTests.swift */; };
 		A5BAE9162E94F380005AFCD1 /* ExpenseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE9152E94F380005AFCD1 /* ExpenseDetails.swift */; };
 		A5BAE9192E979A40005AFCD1 /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE9182E979A40005AFCD1 /* ExpenseView.swift */; };
 		A5BAE91B2E979A66005AFCD1 /* ExpenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BAE91A2E979A66005AFCD1 /* ExpenseCellView.swift */; };
@@ -41,14 +37,10 @@
 		A5BAE8E52E9395FB005AFCD1 /* SplitBuddyPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitBuddyPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BAE8E82E9395FB005AFCD1 /* SplitBuddyPOCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBuddyPOCApp.swift; sourceTree = "<group>"; };
 		A5BAE8EA2E9395FB005AFCD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A5BAE8EC2E9395FB005AFCD1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A5BAE8EE2E9395FC005AFCD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5BAE8F12E9395FC005AFCD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5BAE8F72E9395FC005AFCD1 /* SplitBuddyPOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitBuddyPOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5BAE8FB2E9395FC005AFCD1 /* SplitBuddyPOCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBuddyPOCTests.swift; sourceTree = "<group>"; };
 		A5BAE9012E9395FC005AFCD1 /* SplitBuddyPOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitBuddyPOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5BAE9052E9395FC005AFCD1 /* SplitBuddyPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBuddyPOCUITests.swift; sourceTree = "<group>"; };
-		A5BAE9072E9395FC005AFCD1 /* SplitBuddyPOCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBuddyPOCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A5BAE9152E94F380005AFCD1 /* ExpenseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetails.swift; sourceTree = "<group>"; };
 		A5BAE9182E979A40005AFCD1 /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 		A5BAE91A2E979A66005AFCD1 /* ExpenseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCellView.swift; sourceTree = "<group>"; };
@@ -83,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				A5BAE8E72E9395FB005AFCD1 /* SplitBuddyPOC */,
-				A5BAE8FA2E9395FC005AFCD1 /* SplitBuddyPOCTests */,
-				A5BAE9042E9395FC005AFCD1 /* SplitBuddyPOCUITests */,
 				A5BAE8E62E9395FB005AFCD1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,7 +96,6 @@
 				A5BAE9142E94EBFF005AFCD1 /* Model */,
 				A5BAE8E82E9395FB005AFCD1 /* SplitBuddyPOCApp.swift */,
 				A5BAE8EA2E9395FB005AFCD1 /* ContentView.swift */,
-				A5BAE8EC2E9395FB005AFCD1 /* Item.swift */,
 				A5BAE8EE2E9395FC005AFCD1 /* Assets.xcassets */,
 				A5BAE8F02E9395FC005AFCD1 /* Preview Content */,
 			);
@@ -119,23 +108,6 @@
 				A5BAE8F12E9395FC005AFCD1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A5BAE8FA2E9395FC005AFCD1 /* SplitBuddyPOCTests */ = {
-			isa = PBXGroup;
-			children = (
-				A5BAE8FB2E9395FC005AFCD1 /* SplitBuddyPOCTests.swift */,
-			);
-			path = SplitBuddyPOCTests;
-			sourceTree = "<group>";
-		};
-		A5BAE9042E9395FC005AFCD1 /* SplitBuddyPOCUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A5BAE9052E9395FC005AFCD1 /* SplitBuddyPOCUITests.swift */,
-				A5BAE9072E9395FC005AFCD1 /* SplitBuddyPOCUITestsLaunchTests.swift */,
-			);
-			path = SplitBuddyPOCUITests;
 			sourceTree = "<group>";
 		};
 		A5BAE9142E94EBFF005AFCD1 /* Model */ = {
@@ -289,7 +261,6 @@
 				A5BAE8EB2E9395FB005AFCD1 /* ContentView.swift in Sources */,
 				A5BAE9162E94F380005AFCD1 /* ExpenseDetails.swift in Sources */,
 				A5BAE91B2E979A66005AFCD1 /* ExpenseCellView.swift in Sources */,
-				A5BAE8ED2E9395FB005AFCD1 /* Item.swift in Sources */,
 				A5BAE8E92E9395FB005AFCD1 /* SplitBuddyPOCApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +269,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5BAE8FC2E9395FC005AFCD1 /* SplitBuddyPOCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,8 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5BAE9062E9395FC005AFCD1 /* SplitBuddyPOCUITests.swift in Sources */,
-				A5BAE9082E9395FC005AFCD1 /* SplitBuddyPOCUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
