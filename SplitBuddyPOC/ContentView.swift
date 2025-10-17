@@ -15,6 +15,7 @@ struct ContentView: View {
     @State var isExpenseAdded: Bool = false
     @State var expenseAmount: String = ""
     @State var expenseDesc: String = ""
+    @State var personDetails: String = ""
     
     var body: some View {
         NavigationSplitView {
@@ -39,12 +40,17 @@ struct ContentView: View {
                         onDismiss: {
                             var currentTranscation = TranscationDetails(amount: Double(expenseAmount) ?? 0.00,
                                                                         transactionDescription: expenseDesc, 
-                                                                        transactionDate: Date(),
-                                                                        paidBy: nil)
-                            modelContext.insert(currentTranscation)
+                                                                        transactionDate: Date())
+                            var person = Person(name: personDetails, isOwes: false)
+                            var transaction = Transcation(transactionDetails: currentTranscation, paidBy: person)
+                            modelContext.insert(transaction)
+                            expenseDesc = ""
+                            expenseAmount = ""
+                            personDetails = ""
                         }, content: {
                             ExpenseView(transactionDescription: $expenseDesc,
-                                        amount: $expenseAmount)
+                                        amount: $expenseAmount, 
+                                        personName: $personDetails)
                         })
                 }
             }
